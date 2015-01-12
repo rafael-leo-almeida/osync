@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+    <package name="default" namespace="/" extends="struts-default" >
+      <action name="index" class="com.jtang.console.action.IndexAction" >
+        <result name="success">
+          /index.html
+        </result>
+      </action>
+      
+      <action name="getAllTanents" class="com.jtang.console.action.TanentAction">
+        <result name="success">
+          /tanent.jsp
+        </result>
+      </action>
+      
+      
+      <action name="addTanent" class="com.jtang.console.action.AddTanentAction">
+      <result name="success" type="chain">
+          getAllTanents
+      </result>
+      <result name="failed">
+         /error.jsp
+      </result>
+      </action>
+      
+    </package>
+</struts>

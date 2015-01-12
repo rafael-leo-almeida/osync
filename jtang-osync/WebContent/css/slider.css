@@ -1,0 +1,14 @@
+/*--------- slider ---------*/
+#slide { position:relative; overflow:hidden;  background:#fff; width:940px; margin:5px auto 0 auto; padding:5px; padding-left:10px; z-index:2;}
+
+.slider { width:930px; height:393px; margin:0 auto; position:relative; z-index:2; }
+.items { display:none;}
+
+
+
+
+.prev {}
+.prev:hover {}
+.next {}
+.next:hover {}
+}

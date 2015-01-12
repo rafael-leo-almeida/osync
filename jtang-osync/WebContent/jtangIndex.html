@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<meta charset="utf-8">
+<link href='http://fonts.googleapis.com/css?family=Yellowtail'
+	rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" media="screen"
+	href="css/reset.css">
+<link rel="stylesheet" type="text/css" media="screen"
+	href="css/text.css">
+<link rel="stylesheet" type="text/css" media="screen"
+	href="css/style.css">
+<link rel="stylesheet" type="text/css" media="screen"
+	href="css/grid_12.css">
+<link rel="stylesheet" type="text/css" media="screen"
+	href="css/slider.css">
+<link href='http://fonts.googleapis.com/css?family=Condiment'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oxygen'
+	rel='stylesheet' type='text/css'>
+<script src="js/jquery-2.0.3.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/tms-0.4.x.js"></script>
+<script>
+	$(document).ready(function() {
+		$('.slider')._TMS({
+			show : 0,
+			pauseOnHover : true,
+			prevBu : false,
+			nextBu : false,
+			playBu : false,
+			duration : 1000,
+			preset : 'fade',
+			pagination : true,
+			pagNums : false,
+			slideshow : 7000,
+			numStatus : true,
+			banners : 'fromRight',
+			waitBannerAnimation : false,
+			progressBar : false
+		})
+	});
+</script>
+<!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+      </div>
+    <![endif]-->
+<!--[if lt IE 9]>
+   		<script type="text/javascript" src="js/html5.js"></script>
+    	<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+	<![endif]-->
+</head>
+
+<body>
+	<div class="template">	
+		<div class="layer">
+			<div class="black"></div>
+			<div class="main">
+				<div class="center">
+					<div class="header">
+						<div class="logo">
+							<a target="_blank" href=""><img src="img/jtanglogo4.png" alt="" /></a>
+						</div>
+						<div class="social-icons">
+							<a href="#" class="icon-3"></a> <a href="#" class="icon-2"></a> <a
+								href="#" class="icon-1"></a>
+						</div>
+						<div class="form-search">
+							<form id="form-search" method="post">
+								<input type="text" value="Type here..."
+									onBlur="if(this.value=='') this.value='Type here...'"
+									onFocus="if(this.value =='Type here...' ) this.value=''" /> <a
+									href="#"
+									onClick="document.getElementById('form-search').submit()"
+									class="search_button"></a>
+							</form>
+						</div>
+
+					</div>
+					<div class="clear"></div>
+					<nav>
+						<ul class="menu">
+							<li class="home-page current"><a target="" href="index.html">首页</a></li>
+							<li><a target="" href="getAllTanents.action" >租户管理</a></li>
+							<li><a target="" href="deploy.jsp">同步部署 </a></li>
+							<li><a target="" href="">对象管理</a></li>
+							<li><a target="" href="">日志分析</a></li>
+							<li><a target="" href="">错误提示</a></li>
+						</ul>
+					</nav>
+					<div class="clear"></div>
+					<div class="he"></div>
+
+						<div class="he"></div>
+						<div class="he"></div>
+
+						<div class="wefind">
+							<div class="arrl">
+								<a target="_blank"><img src="img/15.png" alt="" /></a>
+							</div>
+							<div class="find">我们致力于<br/>提供最好的数据库同步解决方案</div>
+							<div class="mid">
+								<img src="img/17.png" alt="" />
+							</div>
+							<div class="vui">支持数据库增量实时同步;支持异构数据库之间同步;支持一对一、一对多、多对一同步;支持多表依赖同步；性能稳定、高效，
+							部署操作简单，全图形化操作......
+							</div>
+							<div class="arrr">
+								<a target="_blank"><img src="img/16.png" alt="" /></a>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<div class="he"></div>
+						<div class="he"></div>
+						<div class="collums">
+							<div class="glossary">
+								<p class="text1">ORACLE</p>
+								<br>
+								<p class="text2">ORACLE数据库实时增量同步工具</p>
+								<br>
+								<p class="text3">&nbsp;&nbsp;&nbsp;&nbsp;ORACLE数据库采用触发器原理监控数据库变化；支持监控数据库的增、删、改操作;
+								 目前已经实现了一对一、一对多、热加载等功能；该同步工具支持分布式、远程同步;可单独使用，也可与JTangESB平台结合；
+								 ORACLE同步工具的配置全部基于图形化控制台......
+								</p>
+								<br>
+								<p>
+									<a target="_blank" class="more" href="">&nbsp;</a>
+								</p>
+							</div>
+							<div class="resources">
+								<p class="text4">SQLSERVER</p>
+								<br>
+								<p class="text2">SQLSERVER数据库实时增量同步工具</p>
+								<br>
+								<p class="text3">&nbsp;&nbsp;&nbsp;&nbsp;SQLSERVER数据库实时增量同步工具采用了日志分析方法监控数据库的变化，采用日志分析方法无需为数据库
+								增加额外的信息，配置简单；该工具支持监控数据库的增、删、改操作;能够实现分布式、远程同步,可单独使用，也可与JTangESB平台结合......
+								</p>
+								<br>
+								<p>
+									<a target="_blank" class="more" href="">&nbsp;</a>
+								</p>
+							</div>
+							<div class="releases">
+								<p class="text4">MYSQL</p>
+								<br>
+								<p class="text2">MYSQL数据库实时增量同步工具</p>
+								<br>
+								<p class="text3">&nbsp;&nbsp;&nbsp;&nbsp;最新的MYSQL版本自带同步配置工具，但是低版本支持有限，同时不支持异构数据库之间的同步；
+								基于以上两个原因，我们采用日志分析的方法实现了MYSQL增量同步工具；性能稳定、高效；能够实现分布式、远程同步；
+								可单独使用，也可于JTang平台结合使用......
+								</p>
+								<br>
+								<p>
+									<a target="_blank" class="more" href="">&nbsp;</a>
+								</p>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<div class="he"></div>
+						<div class="he"></div>
+						<div class="lin">
+							<img src="img/22.png" alt="" />
+						</div>
+						<div class="clear"></div>
+						<div class="he"></div>
+						<div class="he"></div>
+						<div class="contenet">
+							<div class="practice">
+								<p class="text5">使用指南</p>
+								<br>
+								<ul class="practice">
+									<li><a target="_blank" href="">数据库版本以及相关条件说明</a></li>
+									<li><a target="_blank" href="">安装产品</a></li>
+									<li><a target="_blank" href="">配置同步产品</a></li>
+									<li><a target="_blank" href="">加入一个同步实例</a></li>
+									<li><a target="_blank" href="">阅读同步日志</a></li>
+									<li><a target="_blank" href="">阅读错误提示</a></li>
+									<li><a target="_blank" href="">利用日志于错误恢复数据</a></li>
+									<li><a target="_blank" href="">停止同步实例</a></li>
+									<li><a target="_blank" href="">ORACLE同步工具架构设计</a></li>
+									<li><a target="_blank" href="">SQLSERVER同步工具架构设计</a></li>
+									<li><a target="_blank" href="">MYSQL同步工具架构设计</a></li>
+									<li><a target="_blank" href="">使用案例</a></li>
+									<li><a target="_blank" href="">产品开发动态</a></li>
+								</ul>
+							</div>
+							<div class="we" >
+								<p class="text5" align="center">下一步......</p>
+								<br>
+								<ul class="practice" style="padding-left: 100px">
+									<li><a target="_blank" href="">实现完善的持久化系统,实现启动可恢复功能</a></li>
+									<li><a target="_blank" href="">完善的日志分析系统</a></li>
+									<li><a target="_blank" href="">优化控制台</a></li>
+									<li><a target="_blank" href="">优化共享缓存的管理、配置管理、提高系统的稳定性</a></li>
+									<li><a target="_blank" href="">扩展数据库版本</a></li>
+									<li><a target="_blank" href="">支持更多的数据库</a></li>
+									
+								</ul>
+							</div>
+							<div class="new">
+								<p class="text5">最新动态</p>
+								<br>
+								<br> <img src="img/32.png" alt="" align="left"
+									style="padding-right: 25px;" /><span class="text9"><a
+									target="_blank" href="">13.05.8.</a></span><br>
+								<span class="text10"> JTANG 数据库同步工具控制台发布1.0版本 </span><br>
+								<br>
+								<br> <img src="img/32.png" alt="" align="left"
+									style="padding-right: 25px;" /><span class="text9"><a
+									target="_blank" href="">13.03.30.</a></span><br>
+								<span class="text10"> JTANG数据库同步工具正式发布 </span><br>
+								<br>
+								<br> <img src="img/32.png" alt="" align="left"
+									style="padding-right: 25px;" /><span class="text9"><a
+									target="_blank" href="">12.02.20</a></span><br>
+								<span class="text10"> JTANG 数据库同步工具正式开始研发...... </span><br>
+								<br>
+								<p align="right" style="font-size: 15px"> 
+									<a target="_blank" href="" class="" >了解动态</a>
+								</p>
+							</div>
+						</div>
+						<div class="he"></div>
+						<div class="he"></div>
+						<div class="lines">
+							<img src="img/28.png" alt="" />
+						</div>
+						<div class="he"></div>
+						<div class="he"></div>
+						<div class="line">
+							<img src="img/31.png" alt="">
+						</div>
+						<div class="he"></div>
+						<div class="he"></div>
+						<div class="footer">	
+							<!-- VLinks -->
+							
+						</div>
+				</div>
+			</div>
+			<div class="black"></div>
+		</div>
+		<div class="templateright">
+			<div class="grey"></div>
+			<div class="leftcenter"></div>
+			<div class="grey"></div>
+		</div>
+	</div>
+</body>
+</html>
