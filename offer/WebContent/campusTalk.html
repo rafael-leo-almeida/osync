@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<!-- saved from url=(0020)http://www.miui.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>MIUI官方网站 - 发烧友必刷的Android ROM</title>
+<meta name="keywords" content="MIUI,Android,MIUI刷机,小米手机,小米刷机,安卓论坛">
+<meta name="description" content="MIUI是基于Android原生系统和针对中国用户使用习惯开发的Android Rom，MIUI深受手机发烧友喜爱。">
+<link rel="stylesheet" href="/offer/static/index/styles/reset.css">
+<link rel="stylesheet" href="/offer/static/index/styles/common.css">
+<link rel="stylesheet" href="/offer/static/index/styles/index.css">
+<link rel="stylesheet" href="/offer/bst/css/bootstrap.css"/>
+<script type="text/javascript" async="" src="/offer/static/index/js/ga.js">
+</script>
+<script src="/offer/static/index/js/jquery-1.4.2.js" type="text/javascript"></script>
+<script src="/offer/bst/js/bootstrap.js" type="text/javascript"></script>
+<script src="/offer/static/index/js/jquery.backgroundpos.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+var video_src_0 = "<img class='video_close' src='/offer/static/index/images/video_close.png' /><embed width='960' height='548' wmode='opaque' type='application/x-shockwave-flash' src='http://share.vrs.sohu.com/my/v.swf&id=33042209&topBar=1&xuid=e38213936&autoplay=true&skinNum=1&topBar=0&showRecommend=0&autoplay=true&api_key=b3b6095234e5180b7cd06ff0dbc60a2f&fbarad=' allowscriptaccess='sameDomain' allowfullscreen='true'>";
+//var video_src_1 = "<img class='video_close' src='/offer/static/index/images/video_close.png' /><embed width='960' height='548' wmode='opaque' type='application/x-shockwave-flash' src='http://share.vrs.sohu.com/my/v.swf&id=33042235&topBar=1&xuid=e38213936&autoplay=true&skinNum=1&topBar=0&showRecommend=0&autoplay=true&api_key=b3b6095234e5180b7cd06ff0dbc60a2f&fbarad=' allowscriptaccess='sameDomain' allowfullscreen='true'>";
+        var video_src_1 = "<img class='video_close' src='/offer/static/index/images/video_close.png' /><embed width='960' height='548' wmode='opaque' type='application/x-shockwave-flash' src='http://player.youku.com/player.php/sid/XNTM5OTI2MzQw/v.swf' allowscriptaccess='sameDomain' allowfullscreen='true'>";
+var video_src_2 = "<img class='video_close' src='/offer/static/index/images/video_close.png' /><embed width='960' height='548' wmode='opaque' type='application/x-shockwave-flash' src='http://share.vrs.sohu.com/my/v.swf&id=33042246&topBar=1&xuid=e38213936&autoplay=true&skinNum=1&topBar=0&showRecommend=0&autoplay=true&api_key=b3b6095234e5180b7cd06ff0dbc60a2f&fbarad' allowscriptaccess='sameDomain' allowfullscreen='true'>";
+var video_src_3 = "<img class='dialog_close' src='/offer/static/index/images/dialog_close.png'><embed width='700' height='480' wmode='opaque' type='application/x-shockwave-flash' src='http://share.vrs.sohu.com/my/v.swf&id=33042246&topBar=1&xuid=e38213936&autoplay=true&skinNum=1&topBar=0&showRecommend=0&autoplay=true&api_key=b3b6095234e5180b7cd06ff0dbc60a2f&fbarad' allowscriptaccess='sameDomain' allowfullscreen='true'>";
+$(".product_more").hover(function()	{
+$(".products").show();
+},
+function()
+{
+$(".products").hide();
+});
+$(".item2_tab li").click(function() {
+var index = $(".item2_tab li").index($(this));
+var num = $(".item2_tab li").index($(".item2_tab_current"));
+$(".item2_tab li").removeClass("item2_tab_current");
+$(this).addClass("item2_tab_current");
+$(".item2_tab_" + num).hide();
+$(".item2_tab_" + index).fadeIn("fast");
+});
+$(".item4_tab li").click(function() {
+var index = $(".item4_tab li").index($(this));
+var num = $(".item4_tab li").index($(".item4_tab_current"));
+$(".item4_tab li").removeClass("item4_tab_current");
+$(this).addClass("item4_tab_current");
+$(".item4_tab_" + num).fadeOut(100, function() {
+$(".item4_tab_" + index).show();
+});
+});
+$(".video_play").click(function(){
+var _this = $(this);
+var currentDisplay;
+if($("#tm").css("display") == "none"){
+currentDisplay = $(".content_1");
+}else{
+currentDisplay = $("#tm");
+}
+currentDisplay.fadeOut(100,function(){
+var num = $(".video_play").index(_this);
+$(".videos").html(eval("video_src_"+num)).fadeIn(1000);
+$(".video_close").click(function(){
+$(".videos").hide();
+$(".content_1").fadeIn(1000);
+$(".videos").html(" ");
+});
+});		
+});
+$(".ota").click(function(){
+                                                location.href='http://www.miui.com/friday-20140103154757.html';
+                                                /*
+var _this = $(this);
+var currentDisplay;
+if($(".videos").css("display") == "none"){
+currentDisplay = $(".content_1");
+}else{
+currentDisplay = $(".videos");
+}
+currentDisplay.fadeOut(100,function(){			
+$("#tm").fadeIn(1000);			
+});
+$(".ota_close").click(function(e){
+e.stopPropagation();
+$("#tm").hide();
+$(".content_1").fadeIn(1000);                                                
+});*/
+});
+function showDialog(){
+$(".z_index_dialog").show();
+var content_width = $("body").width()/2-350;
+$(".dialog_content").css("left",content_width);
+$(".dialog_content").html(video_src_3);
+$(".dialog_content").show();
+$(".dialog_close").bind("click",dialogClose);
+}
+function dialogClose(){
+$(".z_index_dialog").hide();
+$(".dialog_content").hide();
+$(".dialog_content").html("");
+$(".dialog_close").unbind("click",dialogClose);
+}
+$(".item4_tab2_video_play").bind("click",showDialog);
+
+$(".down_rom").click(function(){
+var supports = $(this).parent().parent();
+var num = supports.find(".down_rom").index($(this));
+var dis_1 = supports.next().css("display");
+var dis_2 = supports.next().next().css("display");
+if( num == 1 )
+{
+if( dis_1 == "block" )
+{
+supports.next().hide();
+supports.next().next().hide();
+}
+else
+{
+supports.next().show();
+supports.next().next().hide();
+supports.next().find(".version_display").css("left" , "");
+}
+};
+if( num == 0 )
+{
+if( dis_2 == "block" )
+{
+supports.next().hide();
+supports.next().next().hide();
+}
+else
+{
+supports.next().hide();
+supports.next().next().show();
+supports.next().next().find(".version_display").css("left" , "560px");
+}
+}
+});
+$(".h3_2>img").hover(
+function()
+{
+$(".h3_2_title").show();
+},
+function()
+{
+$(".h3_2_title").hide();
+}
+);		
+$(".menu li").hover(
+                function(){
+                        var num = $(".menu li").index($(this));
+                        var current = $(".menu>li").index($(".hover"));
+                        if( current == -1 )
+        				{
+        					current = 3;
+        				}
+                        $(".menu").css("background-position",(99 * current)+"px"+" 0");
+                        $(".menu li").removeClass("hover");
+                        $(".menu li").removeClass("lihover");
+                        $(this).addClass("hover");
+                        var len = current - num;
+                        if(len <= 0){ len = -len ;};if(num==0){menuleft=-5;}else{menuleft=99 * num;}
+                        $(".menu").stop().animate({backgroundPosition: menuleft+"px"+" 0"},100 * len);
+},
+        		function()
+        		{
+        			
+        		}
+        );
+        $(".menu").mouseleave(function(){
+        				var num = $(".menu li").index($(".hover"));
+        				if( num == -1 )
+        				{
+        					num = 3;
+        				}
+                        var current =  $(".menu li").index($(".c_menu"));
+                        $(".menu").css("background-position",(99 * num)+"px"+" 0");
+                        $(".menu li").removeClass("hover");
+                        $(".c_menu").addClass("hover");
+                        var len = current - num;
+                        if(len <= 0){ len = -len ;};
+                        $(".menu").stop().animate({backgroundPosition: (99*current)+"px"+" 0"},100*len);
+        });
+        $(".c_menu").mouseover();
+jQuery('.tab').click(function(){
+if(!jQuery(this).hasClass('current_tab')){
+jQuery('.tab').removeClass('current_tab');
+jQuery('.content').removeClass('current_content');
+jQuery(this).addClass('current_tab')
+jQuery('#content_'+this.id).addClass('current_content')
+}
+});
+jQuery(".appl li").click(function(){
+var p = jQuery(this).parent('ul');
+p.find('li').removeClass('current');
+jQuery(this).addClass('current');
+var index = p.find("li").index(jQuery(this));
+var block = jQuery(this).parents('.appl').siblings('.rom_list_div').find('.rom_list');
+block.hide();
+block.eq(index).show();
+});
+});
+</script>
+</head>
+<body>
+<div class="header_on">
+  <div class="header"> <a class="logo" href="/offer/static/index/images/MIUI官方网站 - 发烧友必刷的Android ROM.htm" title="MIUI"></a>
+    <ul class="menu" style="background-position: 0px 0px;">
+      <li class="c_menu hover"><a href="http://www.miui.com/default.php" target="_self">宣讲会</a></li>
+      <li class=""><a href="http://www.miui.com/features.php" target="_self">笔经</a></li>
+      <li class="">
+      <a href="http://www.miui.com/getrom.php">面经</a>
+      </li>
+       <li class="li_3">
+        <div class="product_more"><span>真题闯关</span>
+          <dl class="products" style="display: none;">
+            <dd> <a href="http://app.xiaomi.com/" target="_blank">应用商店</a> </dd>
+            <dd> <a href="http://zhuti.xiaomi.com/" target="_blank">主题商店</a> </dd>
+            <dd> <a href="http://zhuomian.xiaomi.com/" target="_blank">小米桌面</a> </dd>
+            <dd> <a href="https://i.xiaomi.com/" target="_blank">小米云服务</a> </dd>
+<dd> <a href="http://zhushou.xiaomi.com/" target="_blank">小米手机助手</a> </dd>
+          </dl>
+        </div>
+      </li>
+      <li class=""><a href="http://www.xiaomi.com/index.php" target="_blank">真题评估</a></li>
+      <li class=""><a href="http://www.miui.com/index.php">求职论坛</a></li>
+    </ul>
+    <p class="language"><a href="javascript:;" style="color:white;cursor: default;">登录</a><span>|</span><a href="http://tw.miui.com/"></a><span></span><a href="http://en.miui.com/">注册</a></p>
+  </div>
+</div>
+<!--[if IE 6]>
+<script src="/static/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+DD_belatedPNG.fix(".logo");
+DD_belatedPNG.fix(".menu li");
+DD_belatedPNG.fix(".content_1");
+        DD_belatedPNG.fix(".c2_videos li");
+DD_belatedPNG.fix(".c2_videos img");
+DD_belatedPNG.fix(".funcs li"); 
+DD_belatedPNG.fix(".footer_copy_img img");
+DD_belatedPNG.fix(".products");
+        DD_belatedPNG.fix(".index_more img");
+})
+</script>
+<![endif]-->
+
+<script type="text/javascript">
+$(function(){
+var position = ["0 0" , "-122px 0" , "-256px 0" , "-393px 0" , "-526px 0" , "-661px 0" , "-799px 0" , "-934px 0"]
+$(".c2_videos li").hover(
+function()
+{
+var num = $(".c2_videos li").index($(this)) + 4;
+$(this).css("backgroundPosition" , position[num]);
+},
+function()
+{
+var num = $(".c2_videos li").index($(this));
+$(this).css("backgroundPosition" , position[num]);
+}
+)
+})
+</script>
+<div class="content_on">
+<div class="content">
+<div class="content_1">
+<p class="c1_description">迄今为止最好用的Android系统,现在更新到V5，全球数百万手机发烧友共同创造,完美支持Android应用、游戏 ,基于Android深度定制,每周升级, 持续进化</p>
+<a class="to_rom" href="http://www.miui.com/getrom.php">下载MIUI</a>
+<a class="to_discuz" href="http://www.miui.com/index.php">进入论坛</a>
+</div>
+<style>
+.content_on .content #tm{height: 548px;margin: 0 auto;}
+.content_on .content #tm .tm{height: 548px;}
+</style>
+          <script src="/offer/static/index/js/chrome.js" type="text/javascript" language="javascript"></script>
+          <script src="/offer/static/index/js/jquery.backgroundpos.js" type="text/javascript" language="javascript"></script>
+          <link rel="stylesheet" href="/offer/static/index/styles/chrome.css">
+<div id="tm" style="display: none;">        
+        <div class="week-video"><div class="video_close"></div></div>
+        <div class="picPointer">
+                <div class="club_close"><img src="/offer/static/index/images/close.png"></div>
+                <div class="picLeft picarrow"><img src="/offer/static/index/images/leftarrow.png"></div>
+                <div class="picRight picarrow"><img src="/offer/static/index/images/rightarrow.png"></div>     
+                <div class="clubinfo">&nbsp;&nbsp;&nbsp;<a id="clublink" target="_blank" href="">查看详情</a></div>
+        </div>
+        <img class="ota_close" src="/offer/static/index/images/close.png">
+  <div class="chtm-notice" style="display: none; ">已经是第1页了</div>
+  <div class="chtm-temp">
+    <div id="chtm-zoom" class="trans">
+                                        <div class="item item0 currentItem  " index="0" style=" -webkit-transform: translate3d(-25px,-28px,   0px); -moz-transform: translate3d(-25px,-28px,     0px); ">                        
+                                                <div class="block videoitem  item0_1" style="left: -302px;top: -84px;">
+                                        <img flag="video" class="img-thumb" src="/offer/static/index/images/167.png">
+                                        <div class="video-fader"></div>
+<!--                                        <div class="big-small"><p></p></div>-->
+<!--                                        <p class="video_title">第115周更新推荐视频</p>-->
+                                        <div class="play-button"></div>
+                                        <hidden class="video-src" src="http://static.youku.com/v/swf/qplayer.swf?VideoIDS=XNjQ0NDg3NzY4=&amp;isAutoPlay=true&amp;isShowRelatedVideo=false&amp;embedid=-&amp;showAd=0"></hidden>
+                </div>
+                                                        <div class="block logitem item0_2" style="width:300px;left: 54px;top: -83px;"> 
+                                        <div class="logtitle">第167周更新推荐<span class="otalogtime">(2013/12/2~2013/12/9)</span><div class="thumbtack"></div></div>
+  <ul>
+                              <li>新增 不插耳机也能使用收音机</li>
+                              <li>新增 主题“我的”页面新增“我的帐户”</li>
+                      </ul>
+  <div class="log_more"><a target="_blank" href="http://www.miui.com/thread-1526274-1-1.html">查看更多&gt;</a></div>
+                </div>
+                                    
+                   </div>
+                                                        <div class="item item1  item_blur" index="1" style=" -webkit-transform: translate3d(-25px,-28px,   -1000px); -moz-transform: translate3d(-25px,-28px,     -1000px); ">                        
+                                                <div class="block videoitem  item1_1" style="left: -302px;top: -84px;">
+                                        <img flag="video" class="img-thumb" src="/offer/static/index/images/166.png">
+                                        <div class="video-fader"></div>
+<!--                                        <div class="big-small"><p></p></div>-->
+<!--                                        <p class="video_title">第115周更新推荐视频</p>-->
+                                        <div class="play-button"></div>
+                                        <hidden class="video-src" src="http://static.youku.com/v/swf/qplayer.swf?VideoIDS=XNjQxMzczNDMy=&amp;isAutoPlay=true&amp;isShowRelatedVideo=false&amp;embedid=-&amp;showAd=0"></hidden>
+                </div>
+                                                        <div class="block logitem item1_2" style="width:392px;left: 54px;top: -83px;"> 
+                                        <div class="logtitle">第166周更新推荐<span class="otalogtime">(2013/11/25~2013/12/1)</span><div class="thumbtack"></div></div>
+  <ul>
+                              <li>新增 天气支持海外城市、增加预警功能</li>
+                              <li>优化 浏览器中添加网站到“常用”页面时，根据网站图标生成背景色</li>
+                      </ul>
+  <div class="log_more"><a target="_blank" href="http://www.miui.com/thread-1515247-1-1.html">查看更多&gt;</a></div>
+                </div>
+                                    
+                   </div>
+                                                        <div class="item item2  item_blur" index="2" style=" -webkit-transform: translate3d(-25px,-28px,   -2000px); -moz-transform: translate3d(-25px,-28px,     -2000px); ">                        
+                                                <div class="block videoitem  item2_1" style="left: -302px;top: -84px;">
+                                        <img flag="video" class="img-thumb" src="/offer/static/index/images/165.png">
+                                        <div class="video-fader"></div>
+<!--                                        <div class="big-small"><p></p></div>-->
+<!--                                        <p class="video_title">第115周更新推荐视频</p>-->
+                                        <div class="play-button"></div>
+                                        <hidden class="video-src" src="http://static.youku.com/v/swf/qplayer.swf?VideoIDS=XNjM4MjIyMjY0=&amp;isAutoPlay=true&amp;isShowRelatedVideo=false&amp;embedid=-&amp;showAd=0"></hidden>
+                </div>
+                                                        <div class="block logitem item2_2" style="width:334px;left: 54px;top: -83px;"> 
+                                        <div class="logtitle">第165周更新推荐<span class="otalogtime">(2013/11/18~2013/11/24)</span><div class="thumbtack"></div></div>
+  <ul>
+                              <li>新增 小米手机3相机简单模式下智能场景识别</li>
+                              <li>新增 应用详情页增加下载控制功能</li>
+                              <li>新增 支持播放局域网内 DLNA 设备上的视频</li>
+                              <li>新增 主题支持使用兑换码兑换</li>
+                      </ul>
+  <div class="log_more"><a target="_blank" href="http://www.miui.com/thread-1504112-1-1.html">查看更多&gt;</a></div>
+                </div>
+                                    
+                   </div>
+                                                        <div class="item item3  item_blur" index="3" style=" -webkit-transform: translate3d(-25px,-28px,   -3000px); -moz-transform: translate3d(-25px,-28px,     -3000px); ">                        
+                                                <div class="block videoitem  item3_1" style="left: -302px;top: -84px;">
+                                        <img flag="video" class="img-thumb" src="/offer/static/index/images/164.png">
+                                        <div class="video-fader"></div>
+<!--                                        <div class="big-small"><p></p></div>-->
+<!--                                        <p class="video_title">第115周更新推荐视频</p>-->
+                                        <div class="play-button"></div>
+                                        <hidden class="video-src" src="http://static.youku.com/v/swf/qplayer.swf?VideoIDS=XNjM1MTI0Mzk2=&amp;isAutoPlay=true&amp;isShowRelatedVideo=false&amp;embedid=-&amp;showAd=0"></hidden>
+                </div>
+                                                        <div class="block logitem item3_2" style="width:392px;left: 54px;top: -83px;"> 
+                                        <div class="logtitle">第164周更新推荐<span class="otalogtime">(2013/11/11~2013/11/17)</span><div class="thumbtack"></div></div>
+  <ul>
+                              <li>新增 下拉通知栏中，WLAN开关下方显示已连接的网络</li>
+                              <li>新增 通知类短信聚合功能</li>
+                              <li>新增  系统升级后，将在屏幕顶端提醒，无需下拉通知栏</li>
+                              <li>新增  通讯录黄页中，快递单号查询功能新增查询历史</li>
+                              <li>新增  图片投影到小米盒子时，支持缩放功能</li>
+                              <li>新增  在应用商店中可收藏应用到收藏夹</li>
+                      </ul>
+  <div class="log_more"><a target="_blank" href="http://www.miui.com/thread-1491196-1-1.html">查看更多&gt;</a></div>
+                </div>
+                                    
+                   </div>
+                                                        <div class="item item4  item_blur" index="4" style=" -webkit-transform: translate3d(-25px,-28px,   -4000px); -moz-transform: translate3d(-25px,-28px,     -4000px); ">                        
+                                                <div class="block videoitem  item4_1" style="left: -302px;top: -84px;">
+                                        <img flag="video" class="img-thumb" src="/offer/static/index/images/163.png">
+                                        <div class="video-fader"></div>
+<!--                                        <div class="big-small"><p></p></div>-->
+<!--                                        <p class="video_title">第115周更新推荐视频</p>-->
+                                        <div class="play-button"></div>
+                                        <hidden class="video-src" src="http://static.youku.com/v/swf/qplayer.swf?VideoIDS=XNjMyMDgxMDAw=&amp;isAutoPlay=true&amp;isShowRelatedVideo=false&amp;embedid=-&amp;showAd=0"></hidden>
+                </div>
+                                                        <div class="block logitem item4_2" style="width:261px;left: 54px;top: -83px;"> 
+                                        <div class="logtitle">第163周更新推荐<span class="otalogtime">(2013/11/4~2013/11/10)</span><div class="thumbtack"></div></div>
+  <ul>
+                              <li>新增 插入耳机时，通知栏显示音效设置入口</li>
+                              <li>新增 主题“精品”页底部新增“历史经典”、“热门专题”入口</li>
+                              <li>新增 视频支持按演员搜索视频内容</li>
+                      </ul>
+  <div class="log_more"><a target="_blank" href="http://www.miui.com/thread-1479156-1-1.html">查看更多&gt;</a></div>
+                </div>
+                                    
+                   </div>
+                                                        <div class="item item5  item_blur" index="5" style="display:none;  -webkit-transform: translate3d(-25px,-28px,   -5000px); -moz-transform: translate3d(-25px,-28px,     -5000px); ">                        
+                                                <div class="block videoitem  item5_1" style="left: -302px;top: -84px;">
+                                        <img flag="video" class="img-thumb" src="/offer/static/index/images/162.png">
+                                        <div class="video-fader"></div>
+<!--                                        <div class="big-small"><p></p></div>-->
+<!--                                        <p class="video_title">第115周更新推荐视频</p>-->
+                                        <div class="play-button"></div>
+                                        <hidden class="video-src" src="http://static.youku.com/v/swf/qplayer.swf?VideoIDS=XNjI4OTgxMDEy=&amp;isAutoPlay=true&amp;isShowRelatedVideo=false&amp;embedid=-&amp;showAd=0"></hidden>
+                </div>
+                                                        <div class="block logitem item5_2" style="width:261px;left: 54px;top: -83px;"> 
+                                        <div class="logtitle">第162周更新推荐<span class="otalogtime">(2013/10/28~2013/11/3)</span><div class="thumbtack"></div></div>
+  <ul>
+                              <li>新增 浏览器新增“轻应用”</li>
+                              <li>新增 电话自动录音支持单独设置</li>
+                              <li>修复 修复触屏不灵敏问题</li>
+                      </ul>
+  <div class="log_more"><a target="_blank" href="http://www.miui.com/thread-1466923-1-1.html">查看更多&gt;</a></div>
+                </div>
+                                    
+                   </div>
+                                                        <div class="item item6  item_blur" index="6" style="display:none;  -webkit-transform: translate3d(-25px,-28px,   -6000px); -moz-transform: translate3d(-25px,-28px,     -6000px); ">                        
+                                                <div class="block videoitem  item6_1" style="left: 39px;top: -84px;">
+                                        <img flag="video" class="img-thumb" src="/offer/static/index/images/161.png">
+                                        <div class="video-fader"></div>
+<!--                                        <div class="big-small"><p></p></div>-->
+<!--                                        <p class="video_title">第115周更新推荐视频</p>-->
+                                        <div class="play-button"></div>
+                                        <hidden class="video-src" src="http://static.youku.com/v/swf/qplayer.swf?VideoIDS=XNjI2MDI5MTI4=&amp;isAutoPlay=true&amp;isShowRelatedVideo=false&amp;embedid=-&amp;showAd=0"></hidden>
+                </div>
+                                                        <div class="block logitem item6_2" style="left: -300px;top: -83px;"> 
+                                        <div class="logtitle">第161周更新推荐<span class="otalogtime">(2013/10/21~2013/10/27)</span><div class="thumbtack"></div></div>
+  <ul>
+                              <li>新增 "主题风格"客户端全新改版</li>
+                              <li>新增 应用支持云备份</li>
+                              <li>优化 智能IP拨号支持在国内拨打国际长途</li>
+                      </ul>
+  <div class="log_more"><a target="_blank" href="http://www.miui.com/thread-1454282-1-1.html">查看更多&gt;</a></div>
+                </div>
+                                    
+                   </div>
+                                                        <div class="item item7  item_blur" index="7" style="display:none;  -webkit-transform: translate3d(-25px,-28px,   -7000px); -moz-transform: translate3d(-25px,-28px,     -7000px); ">                        
+                                                <div class="block videoitem  item7_1" style="left: 39px;top: -84px;">
+                                        <img flag="video" class="img-thumb" src="/offer/static/index/images/160.png">
+                                        <div class="video-fader"></div>
+<!--                                        <div class="big-small"><p></p></div>-->
+<!--                                        <p class="video_title">第115周更新推荐视频</p>-->
+                                        <div class="play-button"></div>
+                                        <hidden class="video-src" src="http://static.youku.com/v/swf/qplayer.swf?VideoIDS=XNjIzMDE0MDYw=&amp;isAutoPlay=true&amp;isShowRelatedVideo=false&amp;embedid=-&amp;showAd=0"></hidden>
+                </div>
+                                                        <div class="block logitem item7_2" style="left: -245px;top: -83px;"> 
+                                        <div class="logtitle">第160周更新推荐<span class="otalogtime">(2013/10/14~2013/10/20)</span><div class="thumbtack"></div></div>
+  <ul>
+                              <li>新增 浏览器常用页面全新改版</li>
+                              <li>新增 应用商店可以查看升级记录</li>
+                              <li>新增 应用商店个性化应用推荐</li>
+                      </ul>
+  <div class="log_more"><a target="_blank" href="http://www.miui.com/thread-1442353-1-1.html">查看更多&gt;</a></div>
+                </div>
+                                    
+                   </div>
+                                                        <div class="item item8  item_blur" index="8" style="display:none;  -webkit-transform: translate3d(-25px,-28px,   -8000px); -moz-transform: translate3d(-25px,-28px,     -8000px); ">                        
+                                                <div class="block videoitem  item8_1" style="left: 39px;top: -84px;">
+                                        <img flag="video" class="img-thumb" src="/offer/static/index/images/159.png">
+                                        <div class="video-fader"></div>
+<!--                                        <div class="big-small"><p></p></div>-->
+<!--                                        <p class="video_title">第115周更新推荐视频</p>-->
+                                        <div class="play-button"></div>
+                                        <hidden class="video-src" src="http://static.youku.com/v/swf/qplayer.swf?VideoIDS=XNjE5OTIyMDky=&amp;isAutoPlay=true&amp;isShowRelatedVideo=false&amp;embedid=-&amp;showAd=0"></hidden>
+                </div>
+                                                        <div class="block logitem item8_2" style="left: -302px;top: -83px;"> 
+                                        <div class="logtitle">第159周更新推荐<span class="otalogtime">(2013/10/7~2013/10/13)</span><div class="thumbtack"></div></div>
+  <ul>
+                              <li>新增 视频全屏看连续剧，自动播放下一集</li>
+                              <li>新增 录音机听筒模式</li>
+                              <li>新增 浏览器底部工具栏长按快捷操作</li>
+                      </ul>
+  <div class="log_more"><a target="_blank" href="http://www.miui.com/thread-1431160-1-1.html">查看更多&gt;</a></div>
+                </div>
+                                    
+                   </div>
+                                                        <div class="item item9  item_blur" index="9" style="display:none;  -webkit-transform: translate3d(-25px,-28px,   -9000px); -moz-transform: translate3d(-25px,-28px,     -9000px); ">                        
+                                                <div class="block videoitem  item9_1" style="left: 39px;top: -84px;">
+                                        <img flag="video" class="img-thumb" src="/offer/static/index/images/158.png">
+                                        <div class="video-fader"></div>
+<!--                                        <div class="big-small"><p></p></div>-->
+<!--                                        <p class="video_title">第115周更新推荐视频</p>-->
+                                        <div class="play-button"></div>
+                                        <hidden class="video-src" src="http://static.youku.com/v/swf/qplayer.swf?VideoIDS=XNjEzOTM1NDAw=&amp;isAutoPlay=true&amp;isShowRelatedVideo=false&amp;embedid=-&amp;showAd=0"></hidden>
+                </div>
+                                                        <div class="block logitem item9_2" style="width:342px;height: 93px;left: -331px;top: -83px;"> 
+                                        <div class="logtitle">第158周更新推荐<span class="otalogtime">(2013/9/23~2013/9/29)</span><div class="thumbtack"></div></div>
+  <ul>
+                              <li>新增 浏览器新增“上网导航”模块</li>
+                      </ul>
+  <div class="log_more"><a target="_blank" href="http://www.miui.com/thread-1413388-1-1.html">查看更多&gt;</a></div>
+                </div>
+                                    
+                   </div>
+                                                           
+    </div>
+  </div>
+  <div id="chtm-center">
+     <div id="tm-ceil" style="background-position: 0px 0px; "> </div>
+    <div id="tm-floor" class="status1" style="background-position: 0px 0px; "> </div>
+  </div>
+        <div id="chtm-date">
+                <div id="chtm-week" style="top: 0px; opacity: 0.3; ">167</div>
+                <!--
+                <div class="date-separator">|</div>
+               <div id="chtm-week-container" style="">
+            <div class="drawer" style="left: 0px; ">              
+              <div class="drawer-options" style="display: none; "><div class="">2008</div><div class="selected">2009</div><div class="">2010</div><div class="">2011</div><div class="">2012</div></div>
+              <div class="drawer-arrow"></div>
+            </div>
+          </div>
+                -->
+        </div>
+</div><div style="display: none; height: 548px; position: relative; width: 960px; z-index: 10;" class="videos"> </div>
+<div class="content_2">
+<ul class="c2_videos">
+<li class="video_0">
+<img class="video_play" src="/offer/static/index/images/video_play.png">
+<h3>MIUI 介绍视频</h3>
+</li>
+<li class="video_1">
+<img class="video_play" src="/offer/static/index/images/video_play.png">
+<h3>MIUI V5视频</h3>
+</li>
+<li class="video_2">
+<img class="video_play" src="/offer/static/index/images/video_play.png">
+<h3>MIUI 自由桌面</h3>
+</li>
+<li class="ota">
+<h3>橙色星期五</h3>
+</li>
+</ul>
+</div>
+<div class="content_3">
+<ul class="funcs">
+            <a href="http://www.miui.com/features.php#item1">
+<li class="func_0">
+<h3>电话、短信</h3>
+<p>根据中国用户使用习惯特别优化<br>
+          更可发送免费网络短信</p>
+</li>
+                </a>
+                <a href="http://www.miui.com/features.php#item2">
+<li class="func_1">
+<h3>更安全</h3>
+<p>系统级全面保护手机和数据安全<br>
+          更可拦截广告电话、短信</p>
+</li>
+                </a>
+                <a href="http://www.miui.com/features.php#item3">
+<li class="func_2">
+<h3>丰富的在线资源</h3>
+<p>取之不尽的视频、音乐、游戏<br>
+          更有超过60万安卓应用...无比强大</p>
+</li>
+                </a>
+                <a href="http://www.miui.com/features.php#item4">
+<li class="func_3">
+<h3>与众不同</h3>
+<p></p><p>独创百变主题与自由桌面<br>
+          从里到外，让你的手机个性十足</p><p></p>
+</li>
+                </a>
+                <a href="http://www.miui.com/features.php#item5">
+<li class="func_4">
+<h3>云服务</h3>
+<p>同步通讯录、短信、相册<br>
+          为你保管好一切</p>
+</li>
+                </a>
+                <a href="http://www.miui.com/features.php#item6">
+<li class="func_5">
+<h3>极速桌面体验</h3>
+<p>驱动级系统优化<br>
+          提供丝般顺滑体验</p>
+</li>
+                </a>
+                <a href="http://www.miui.com/features.php#item7">
+<li class="func_6">
+<h3>200余项功能改进</h3>
+<p>精心打造相机、闹钟等必备工具<br>
+          更有贴心的大字体、语音助手...
+          </p>
+</li>
+                </a>
+                <a href="http://www.miui.com/features.php#item8">
+<li class="func_7">
+<h3>“活”的操作系统</h3>
+<p>根据论坛反馈不断进化<br>
+          每周五更新，风雨无阻</p>
+</li>
+                </a>
+<div style="clear: both;"></div>
+</ul>
+<p class="index_more"><a href="http://www.miui.com/features.php">了解更多 MIUI功能</a></p>
+</div>
+</div>
+</div><div class="footer_on">
+        <div class="footer">
+  <ol>
+    <li>
+      <h4 style="width:74px">活动公告</h4>
+      <dl>
+        <dd><a href="http://www.miui.com/extra.php?mod=signcard/index" target="_blank">四格报告</a></dd>
+        <dd><a href="http://www.miui.com/extra.php?mod=apply/index" target="_blank">内测申请</a></dd>
+      </dl>
+    </li>
+    <li class="middleli">
+      <h4 class="h4width" style="width:94px">更新日志</h4>
+      <dl>
+<dd><a href="http://www.miui.com/changelog.html?v=4.1.3" target="_blank">4.1.3（开发版）</a></dd>
+        <dd><a href="http://www.miui.com/changelog.html?v=3.2.22" target="_blank">3.2.22（推荐版）</a></dd>
+      </dl>
+    </li>
+    <li class="lastli">
+      <h4 style="width:76px">关注MIUI</h4>
+      <dl>
+        <dd><a href="http://weibo.com/miui" target="_blank">新浪微博</a></dd>
+        <dd><a href="http://t.qq.com/miui_rom" target="_blank">腾讯微博</a></dd>
+      </dl>
+    </li>
+    <div style="clear:both"></div>
+  </ol>
+  <p class="copyright">MIUI官方网站<span>-</span>发烧友必刷的Android<span>ROM</span>-<span>北京小米科技</span>©<span>2013</span>京ICP备10046444号</p>
+  <p class="footer_copy_img"><img src="/offer/static/index/images/footer_copy.png"></p>
+</div>
+</div>
+<div style="display:none;">
+  <script src="/offer/static/index/images/stat.php" type="text/javascript" language="JavaScript"></script><script src="/offer/static/index/images/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=2441309" target="_blank" title="站长统计">站长统计</a>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37617644-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body></html>

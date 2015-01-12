@@ -1,0 +1,299 @@
+#tm{position:relative;width:960px;height:560px;margin:0 auto 1px;background-image: -webkit-linear-gradient(top,#E6E6E6 12%,#EFEFEF 25%,white 44%,white 60%,#bebcbc 100%);background:-moz-linear-gradient(center top , #E6E6E6 12%, #EFEFEF 25%, white 44%, white 60%, #E6E6E6 100%) repeat scroll 0 0 transparent;overflow:hidden;}
+.chtm-temp{-webkit-perspective:300;perspective:300px;-webkit-transform-style:preserve-3d;perspective:300;transform-style:preserve-3d;position:absolute;left:50%;top:50%;z-index:99;
+-moz-transform-style:preserve-3d;
+-moz-perspective:300;
+}
+.chtm-notice{position:absolute;bottom:14px;left:45%;height:20px;font-size:16px;line-height:20px;color: #777;display: none;z-index:99;}
+#chtm-zoom{-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-webkit-backface-visibility:hide;-moz-backface-visibility:hide;-webkit-transform:translateZ(0px);-moz-transform:translateZ(0px);}
+.item{-webkit-transform-style:flat;-moz-transform-style:flat;position:absolute;-webkit-transition:-webkit-filter 0.7s linear;-moz-transition:-moz-filter 0.7s linear;}
+.item_blur{-webkit-filter: blur(16px); opacity: 0.8;}
+.item img{display:block;}
+.video_title{line-height:14px;font-size:14px;margin-top:5px;}
+.description{font-size:12px;line-height:20px;color: #777}
+.block{position:absolute;padding:0;margin:0;border-radius:5px;-webkit-transition:box-shadow 0.8s linear;-moz-transition:box-shadow 0.8s linear;/*border:1px solid #eaeaea;padding:10px;background-image:-webkit-gradient(linear,0% 0%, 0% 100%, from(#e6e6e6), to(#ffffff));background:-moz-linear-gradient(center top , #e6e6e6, white) repeat scroll 0 0 transparent;*/}
+.currentItem  .block{box-shadow:0 4px 20px #1c1c1c;}
+
+.ota_close {right: 0;position: absolute;-webkit-transform: translateZ(0);-moz-transform:translateZ(0);cursor: pointer;z-index: 999;}
+.video_title{text-align: center}
+.play-button{position: absolute;background-image: url(../images/ie_play.png);background-position: 0 0;width: 86px;height: 86px;margin-left: -42px;margin-top: -42px;opacity: .9;left: 50%;top: 50%;cursor: pointer;}
+
+.item_noblur{-webkit-filter: blur(0px) !important; opacity: 1;-webkit-transition:-webkit-filter 0.4s linear;-moz-transition:-moz-filter 0.4s linear;}
+.videoitem{cursor: pointer;}
+.clubitem{cursor: pointer;background-color: #c9c9c9;padding: 3px;border: 1px solid #969083;}
+.trans{-webkit-transition:-webkit-transform 0.7s linear;transition:transform 0.7s linear;-moz-transition:-moz-transform 0.7s linear;}
+.trans_cur{-webkit-transition:-webkit-transform 0.1s linear;transition:transform 0.1s linear;-moz-transition:-moz-transform 0.1s linear;}
+
+#chtm-center{position: absolute;left: 40%;top: 30%;z-index:10;pointer-events:none;}
+#tm-floor {position: absolute;background: url(../images/chtm_grid.png) 0 0 scroll transparent;z-index:10;}
+.status0 {width: 1740px;height: 1415px;-webkit-transform: matrix3d(1, 0, 0, 0, 1.333, 1.25, 1, -0.001667, 0, -1, 0, 0, -1541, -1146,312, 1.968) translateZ(0px);transform: matrix3d(1, 0, 0, 0, 1.333, 1.25, 1, -0.001667, 0, -1, 0, 0, -1541, -1146,312, 1.968) translateZ(0px);-moz-transform: matrix3d(1, 0, 0, 0, 1.333, 1.25, 1, -0.001667, 0, -1, 0, 0, -1541, -1146,312, 1.968) translateZ(0px);}
+.status1 {width: 1749px;height: 1450px;-webkit-transform: matrix3d(1, 0, 0, 0, 1.333, 1.25, 1, -0.001667, 0, -1, 0, 0, -1180, -766,312, 1.568) translateZ(0px);transform: matrix3d(1, 0, 0, 0, 1.333, 1.25, 1, -0.001667, 0, -1, 0, 0, -1180, -766,312, 1.568) translateZ(0px);-moz-transform: matrix3d(1, 0, 0, 0, 1.333, 1.25, 1, -0.001667, 0, -1, 0, 0, -1180, -766,312, 1.568) translateZ(0px);}
+
+#tm-ceil{position: absolute;background: url(../images/chtm_grid.png) 0 0 scroll transparent;z-index:10;width: 1734px;height: 1514px;-webkit-transform: matrix3d(1, 0, 0, 0, 1.333, 1.1125, 1, -0.001667, 0, -1, 0, 0, -927, -1090,169, 1.2668) translateZ(37px);-moz-transform:matrix3d(1, 0, 0, 0, 1.333, 1.1125, 1, -0.001667, 0, -1, 0, 0, -927, -1090,169, 1.2668) translateZ(37px);}
+
+.big-small {position: absolute;overflow: hidden;bottom: 0px;right: 0px;width: 20px;height: 20px;cursor: pointer;}
+.big-small p{background-image: url(../images/chtm_sprites.png);background-position: -54px -105px;margin: 10px 4px 4px 10px;height: 5px;}
+#chtm-date{position: absolute;visibility: hidden;z-index: 99;left: 50%;bottom: 12px;box-sizing: border-box;
+color: rgb(102, 102, 102);font-size: 30px;font-weight: 400;text-shadow: 0 0 10px white;clear: both;height: 49px;
+pointer-events: none;
+-webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+width: 920px;
+margin-left: -460px;
+display: block; visibility: visible; 
+}
+#chtm-date  #chtm-week {
+top: 0px; 
+line-height: 49px;
+opacity: .3;
+}
+#chtm-date #chtm-week-container {
+pointer-events: auto;
+cursor: pointer;
+}
+#chtm-date #chtm-week-container .drawer .drawer-options {
+padding-left: 7px;
+font-size: 24px;
+line-height: 49px;
+}
+.drawer-options div {
+opacity: .3;
+margin-left: 10px;
+}
+.drawer-options div.selected {
+opacity: 1;
+}
+.drawer-options div:hover {
+opacity: 1;
+color: #ED5410;
+}
+ .drawer-arrow{
+width: 5px;
+height: 9px;
+padding: 20px 15px;
+background: url(../images/chtm_sprites.png);
+background-position: -54px -77px;
+-webkit-background-clip: content-box;
+-moz-background-clip: content-box;
+background-clip: content-box;
+-webkit-background-origin: content-box;
+-moz-background-origin: content-box;
+background-origin: content-box;
+}
+ .expanded .drawer-arrow {
+-webkit-transform: scaleX(-1);
+-moz-transform: scaleX(-1);
+-o-transform: scaleX(-1);
+-ms-transform: scaleX(-1);
+transform: scaleX(-1);
+}
+ #chtm-week-container:hover .drawer .drawer-arrow {
+background-position: -54px -86px;
+}
+#chtm-date div {
+position: relative;
+float: left;
+}
+.img-thumb{
+width: 320px;
+height: 203px;
+border-radius: 5px;
+}
+.video-fader {
+width:320px;height:203px; 
+left: 0px; top: 0px; 
+background: black;
+position: absolute;
+/*-webkit-transition: opacity 1s;*/
+display: none;
+opacity: 0;
+}
+.week-video{
+        position: absolute;
+        padding: 5px;
+        top: -999px;
+        left: -999px;
+        background: url(../images/videoboxbg.png) 0 0 repeat-x transparent;
+        border-radius: 2px;
+        z-index: 102;
+}
+.week-video  .video_close{
+        background: url(../images/videoclose.png) 0 0 repeat-x transparent;
+        position: absolute;
+        height: 28px;
+        width: 28px;
+        right: -32px;
+        top: 2px;
+        cursor: pointer;
+}
+.currentShow .big-small p{
+        -webkit-transform: scaleX(-1) scaleY(-1);
+        -moz-transform: scaleX(-1) scaleY(-1);
+        -o-transform: scaleX(-1) scaleY(-1);
+        -ms-transform: scaleX(-1) scaleY(-1);
+        transform: scaleX(-1) scaleY(-1);
+}
+
+.picPointer{
+        position: absolute;
+        top: 76px;
+        left: 152px; 
+        top: -888px;
+        left: -888px; 
+        background-color:transparent;
+        width: 678px;
+        height: 380px; 
+        z-index: 101;
+}
+
+.picPointer div {
+        cursor: pointer;
+}
+
+ .picarrow {
+/*        float: left;
+        width: 339px;
+        height: 380px;*/
+        position: absolute;
+        top: 160px;
+}
+.picLeft{
+        left: -90px;
+}
+.picRight{
+        right: -90px;
+}
+.clubinfo{
+position: absolute;
+bottom: 8px;
+color: #CECECE;
+text-align: center;
+width: 678px;
+}
+.clubinfo a {
+        color: #CECECE;
+        text-decoration: underline;
+}
+.item .block a:hover{
+        color: blue;
+}
+ .date-separator {
+font-size: 24px;
+line-height: 46px;
+font-weight: 300;
+margin-left: 7px;
+opacity: .2;
+}
+
+
+.logitem{
+        background: url(../images/logbg.png) 0 0 repeat-x transparent;
+        cursor: pointer;
+}
+.logitem ul li{
+        color: #8c2e04;
+        font-size: 14px;
+}
+.logitem ul{        
+        list-style-type:disc;
+                padding-left: 32px;
+               padding: 6px 10px 6px 32px;
+}
+
+.logitem .logtitle{
+        line-height: 40px;
+        padding-left: 13px;
+        font-size: 18px;
+        color: #a24b0f;
+        height: 38px;
+        border-bottom: 1px solid #e5ad34;
+        border-radius: 5px 5px 0 0;
+        background: url(../images/logtitlebg.png) 0 0 repeat-x transparent;
+}
+.logitem .new{
+        border-top: 1px dashed #b29453;
+        padding: 20px 26px 4px;
+        margin: 0 8px;
+        vertical-align:sub;
+        text-align: right;
+        font-size: 12px;
+        position: absolute;
+        bottom: 0px;
+}
+.logitem  .new .newphone{
+        background: url(../images/newphone.png) 0 0 no-repeat transparent;
+        position: absolute;
+        width: 18px;
+        height: 29px;
+        right: 11px;
+        bottom: 6px;
+}
+.logitem .new .n_s{
+                color: #a50e08;
+                padding-right: 5px;
+}
+.logitem .new .n_p_l{
+        margin: 2px auto;
+        display: none;
+}
+.logitem .new .p_l{
+        width: 130px;
+        float: left;
+        margin: -10px 10px;
+        text-align: center;
+}
+.logitem .new .p_l img{
+        padding: 0 4px;margin: 0 auto 8px;
+}
+.logitem .thumbtack{
+         background: url(../images/logclose.png) 0 0 no-repeat transparent;
+         position: absolute;
+         display: none;
+        width: 32px;
+        height: 24px;
+        right: 12px;
+        top: 18px;
+}
+
+.black{
+        position: absolute;
+        background-color: black;
+        opacity: 0;
+        width: 2000px;
+        height: 2000px;
+        top: -800px;
+        left: -800px;
+        z-index: 100;
+        display: none;
+}
+.club_close{
+        position: absolute;
+        top: 6px;
+        right: 6px;
+}
+.clubtitle{
+        position: absolute;
+        bottom: 0;
+        width: 93%;
+        color: white;
+        font-size: 10px;
+        opacity: 0.5;
+        margin: 4px;
+        text-align: center;
+        background-color: black;
+}
+.logtitle .otalogtime{
+        font-size: 16px;
+        display: none;
+}
+.log_more {
+        position: absolute;
+        font-size: 12px;
+        right: 40px;
+        display: none;
+}
+.log_more a{
+        color: #7f6836;        
+}
+.log_more a :hover{
+        color: #7f6836;        
+}
